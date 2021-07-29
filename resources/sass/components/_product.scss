@@ -1,0 +1,186 @@
+.product
+{
+    position: relative;
+    margin-bottom: 2rem;
+    .product__img
+    {
+	background: $light;
+	img
+	{
+	    height: 150px;
+	    width: 100%;
+	    object-fit: contain;
+	    @include media-breakpoint-up(md)
+	    {
+		height: 300px;
+	    }
+	}
+    }
+
+    .product__name
+    {
+	display: block;
+	font-size: .9rem;
+	min-height: 60px;
+    }
+
+    .wishlist
+    {
+	.heart
+	{
+	    width: 40px;
+	    height: 40px;
+	    display: flex;
+	    align-items: center;
+	    justify-content: center;
+	    padding: .5rem;
+	    border: 1px solid $secondary;
+	    border-radius: 50%;
+	    color: $primary;
+	    font-size: 1.3rem;
+	}
+    }
+
+    .product__price
+    {
+	font-weight: 700;
+
+	s
+	{
+	    color: $muted;
+	    padding-right: .25rem;
+	    font-size: .9rem;
+	}
+    }
+    
+}
+
+.product-list
+{
+    @include media-breakpoint-down(sm)
+    {
+	margin: 0;
+	padding: 0;
+
+	.col-6
+	{
+	    padding: 0 .3rem;
+	}
+    }
+}
+
+.product-description-page
+{
+    position: relative;
+
+    .product-description-bg
+    {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: $light;
+	@include media-breakpoint-up(lg)
+	{
+	    height: 900px;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    top: 1%;
+	    height: 600px;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    height: 700px;
+	    top: 2%;
+	}
+    }
+
+    .side-bar-categories
+    {
+	margin-top: 0;
+	@include media-breakpoint-up(lg)
+	{
+	    min-height: 635px;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    min-height: 750px;
+	}
+    }
+
+    .product__name
+    {
+	font-size: 1.4rem;
+	font-weight: 400;
+
+	@include media-breakpoint-up(lg)
+	{
+	    font-size: 1.6rem;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    font-size: 1.8rem;
+	}
+    }
+
+    .product__price
+    {
+	font-weight: 700;
+	font-size: 1.5rem;
+	s
+	{
+	    font-weight: 400;
+	    font-size: 1.2rem;
+	    padding-right: 1rem;
+	    color: $muted;
+
+	}
+    }
+
+    .product__description
+    {
+	font-size: .9rem;
+	p
+	{
+	    margin-bottom: .5rem;
+	    line-height: 2;
+	}
+    }
+
+    .product__specs
+    {
+	button
+	{
+	    color: $primary;
+	    border-bottom: 1px solid $primary;
+	    font-size: .9rem;
+	    font-weight: 600;
+	    padding: 0;
+	}
+    }
+
+    .product-list
+    {
+	.product__name
+	{
+	    font-size: .9rem;
+	}
+
+	.similar-products-title
+	{
+	    font-size: 1.5rem;
+	    text-transform: uppercase;
+	}
+    }
+
+    .single-product-details
+    {
+	display: inline-block;
+	text-align: left;
+	@include media-breakpoint-up(xl)
+	{
+	    max-width: 470px;
+	}
+    }
+}

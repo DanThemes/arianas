@@ -1,0 +1,179 @@
+#header-categories
+{
+    .category
+    {
+	position: relative;
+	text-align: center;
+	/*min-width: 150px;*/
+	font-size: .9rem;
+	font-weight: 500;
+	padding: 0 .5rem;
+	@extend .anim;
+
+	.icon
+	{
+	    font-size: .5rem;
+	    font-weight: 700;
+	}
+
+	.category-open
+	{
+	    width: 100%;
+	    background: #fff;
+	    color: $primary;
+	    min-width: max-content;
+	    @extend .shadow-md;
+	    @include media-breakpoint-up(xl)
+	    {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 50px;
+	    }
+
+	    &:after
+		{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -21px;
+		width: 0;
+		height: 0;
+		border: 10px solid transparent;
+		border-bottom-color: #ececec;
+		z-index: -1;
+		@extend .anim;
+	    }
+
+	    @include media-breakpoint-up(lg)
+	    {
+		&:after
+		    {
+		    content: '';
+		}
+	    }
+
+	    a
+	    {
+		display: block;
+		padding: 1rem;
+		font-size: .9rem;
+		font-weight: 400;
+		border-bottom: 1px solid transparent;
+		@include media-breakpoint-up(xl)
+		{
+		    padding: .5rem 1rem;
+		}
+
+		&:hover
+		    {
+		    border-bottom: 1px solid #f1f1f1;
+		}
+	    }
+	}
+    }
+}
+
+.category-name
+{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 0;
+    @include media-breakpoint-up(md)
+    {
+	font-size: 2rem;
+    }
+    @include media-breakpoint-up(lg)
+    {
+	font-size: 2.5rem;
+    }
+}
+
+.side-bar-categories
+{
+    background: #fff;
+    @extend .shadow-md;
+
+    @include media-breakpoint-up(lg)
+    {
+	min-height: 60%;
+    }
+
+    @include media-breakpoint-up(xl)
+    {
+	margin-top: -5rem;
+    }
+    @include media-breakpoint-up(xxl)
+    {
+	padding: 2rem 4rem !important;
+    }
+
+    .categories-list
+    {
+	.categories__title
+	{
+	    font-size: 2rem;
+	    @include media-breakpoint-up(xl)
+	    {
+		font-size: 2.4rem;
+	    }
+	}
+
+	li
+	{
+	    padding: .5rem 0;
+
+	    &.active
+	    {
+		color: $primary;
+		font-weight: 700;
+
+		ul
+		{
+		    color: initial;
+		}
+		
+		.subcategory
+		{
+		   
+		    .active
+		    {
+			color: $base-color;
+		    }
+		    
+		    ul
+		    {
+			font-weight: normal;
+		    }
+		}
+	    }
+	}
+
+	.category
+	{
+	    font-size: .9rem;
+	    /*font-weight: 700;*/
+	    text-transform: uppercase;
+
+	    span
+	    {
+		/*font-weight: 700;*/
+		font-size: .5rem;
+	    }
+	}
+
+	.subcategory
+	{
+	    text-transform: uppercase;
+	    font-size: .9rem;
+	    padding-left: 1rem;
+
+	    li
+	    {
+		border-bottom: 1px solid #e8e8e8;
+		padding: .7rem 0;
+	    }
+	}
+    }
+}

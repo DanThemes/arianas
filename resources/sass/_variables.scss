@@ -1,0 +1,38 @@
+$font-base: 'Montserrat', sans-serif;
+
+
+/*colors*/
+$primary: #f3969a;
+$secondary: #1b1b1b; 
+$muted: #868CA7;
+
+$black: #000;
+
+$base-color: #1b1b1b;
+
+$theme-colors: (
+"muted" : #868CA7,
+"black" : #000,
+);
+
+$enable-rounded: false;
+/** breakpoints **/
+
+
+$grid-breakpoints: (
+xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1601px,
+);
+
+$container-max-widths: (
+sm: 540px,
+md: 720px,
+lg: 980px,
+xl: 1350px,
+xxl: 1500px
+)
+
