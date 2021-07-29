@@ -1,0 +1,28 @@
+@import "variables";
+
+
+/** 3rd pary **/
+@import "bootstrap/bootstrap.scss";
+@import "../stylesheets/vendor/all.min.css"; // font-awesome
+@import "../stylesheets/vendor/owl.carousel.css"; //owl-carousel
+@import "../stylesheets/vendor/owl.theme.default.min.css"; // owl-theme
+@import "../stylesheets/vendor/swipebox/css/swipebox.css"; //swipebox
+@import "../stylesheets/vendor/icomoon/style.css"; //iconmoon - custom 
+@import "../stylesheets/vendor/bootstrap-float-label.css";  //custom form
+
+
+@import "layout";
+
+
+/** components **/
+
+@import "components/helpers";
+@import "components/navbar";
+@import "components/categories";
+@import "components/cart";
+@import "components/product";
+@import "components/carousels";
+@import "components/pagination";
+@import "components/product-gallery";
+@import "components/input-counter";
+@import "components/search";

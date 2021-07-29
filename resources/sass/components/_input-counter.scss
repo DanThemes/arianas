@@ -1,0 +1,49 @@
+.input-counter
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*width: 120px;*/
+    /*padding: .5rem;*/
+
+    /*@extend .bg-light;*/
+    /*@extend .border;*/
+    @include media-breakpoint-down(sm)
+    {
+	width: 190px;
+    }
+
+    i
+    {
+	font-size: .8rem;
+    }
+
+    input
+    {
+	background: transparent;
+	width: 50px;
+	border: none;
+	text-align: center;
+	padding: .3rem;
+	font-weight: 700;
+    }
+
+    .plus-btn, .minus-btn
+    {
+	cursor: pointer;
+	background: darken($light, 3%);
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	padding: 0 .4rem;
+	font-size: .8rem;
+	@include media-breakpoint-up(md)
+	{
+	    height: 50px;
+	    width: 50px;
+	}
+    }
+}

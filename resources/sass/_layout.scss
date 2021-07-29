@@ -1,0 +1,635 @@
+
+body
+{
+    font-family: $font-base;
+    color: $base-color;
+}
+
+section
+{
+    padding: 1.5rem 0;
+
+    @include media-breakpoint-up(md)
+    {
+        padding: 2rem 0;
+    }
+
+    @include media-breakpoint-up(xl)
+    {
+        padding: 3rem 0;
+    }
+}
+
+a
+{
+    color: inherit;
+    &:hover
+        {
+        text-decoration: none;
+        color: inherit;
+    }
+}
+
+footer
+{
+    .brand-logo
+    {
+	width: 200px;
+    }
+
+    .icetech-logo
+    {
+        width: 150px;
+
+        @include media-breakpoint-up(md)
+        {
+            width: 200px;
+        }
+    }
+
+
+    .footer-menu
+    {
+	color: #fff;
+
+	li
+	{
+	    margin-bottom: .5rem;
+	}
+
+	.menu__title
+	{
+	    font-weight: 700;
+	    font-size: 1rem;
+	    text-transform: uppercase;
+	}
+
+	.menu__content
+	{
+	    font-size: .9rem;
+	    .icon
+	    {
+		width: 25px;
+		display: inline-block;
+		padding-right: .3rem;
+		font-size: 1rem;
+	    }
+	}
+    }
+
+    .online-pay
+    {
+	height: 20px;
+    }
+
+}
+
+.copyright
+{
+    background: darken($primary, 5%);
+}
+
+#swipebox-overlay
+{
+
+    background: rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    @extend .blur;
+
+
+    @include media-breakpoint-up(md)
+    {
+        padding: 50px 100px;
+    }
+}
+
+#swipebox-container
+{
+    overflow: hidden;
+    @extend .shadow-lg;
+}
+
+.sticky-footer
+{
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    padding: 24px;
+    /* font-size: 11px; */
+    z-index: 1000000;
+}
+
+
+
+.modal-backdrop
+{
+    background-color: $primary;
+
+    &.show
+    {
+	opacity: 0.8;
+    }
+}
+
+
+
+.gdpr-check
+{
+    &.form-group
+    {
+	&:before, &:after
+	    {
+	    display: none;
+	}
+    }
+
+    label
+    {
+	position: relative !important;
+	top: auto !important;
+	transform: none !important;
+	left: auto !important;
+	&:before, &:after
+	    {
+	    display: none;
+	}
+	span
+	{
+	    font-size: initial !important;
+	}
+
+	&.label-initial
+	{
+	    span
+	    {
+		font-size: initial !important;
+	    }
+	}
+    }
+}
+
+
+.custom-modal
+{
+    .close
+    {
+	float: none;
+    }
+
+    .modal-form
+    {
+	.form-group
+	{
+	    display: flex;
+	    align-items: center;
+	    padding: .3rem 1rem;
+	    @extend .border;
+
+	    .form-control
+	    {
+		border: none;
+		background: transparent;
+	    }
+
+	}
+
+    }
+
+
+    .gdpr-check
+    {
+	.form-group
+	{
+	    border: none !important;
+	}
+    }
+
+    .modal-content
+    {
+	border: 0;
+    }
+}
+
+
+//////////////
+
+.help
+{
+    color: #fff;
+    font-weight: 600;
+    font-size: .9rem;
+
+    .icon
+    {
+	font-size: 1.3rem;
+	font-weight: 600;
+    }
+
+}
+
+.cover
+{
+    position: relative;
+
+    .cover-bg
+    {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -1;
+	@extend .bg-light;
+	@include media-breakpoint-up(lg)
+	{
+	    height: 90%;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    height: 85%;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    height: 90%;
+	}
+    }
+
+    .cover__title
+    {
+
+	padding: 1.5rem 0;
+	@include media-breakpoint-up(md)
+	{
+	    padding: 3rem 0;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    padding: 4rem 0;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    padding: 5rem 0;
+	}
+
+	h1
+	{
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    font-size: 1.9rem;
+	    @include media-breakpoint-up(md)
+	    {
+		font-size: 2rem;
+	    }
+	    @include media-breakpoint-up(lg)
+	    {
+		font-size: 2.5rem;
+	    }
+	    @include media-breakpoint-up(xl)
+	    {
+		font-size: 3rem;
+	    }
+	    @include media-breakpoint-up(xxl)
+	    {
+		font-size: 3.3rem;
+	    }
+	}
+    }
+
+    .cover__content
+    {
+	@include media-breakpoint-up(lg)
+	{
+	    margin-top: -10%;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    margin-top: -15%;
+	    max-width: 500px;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    margin-top: -10%;
+	}
+    }
+
+    .cover__photo
+    {
+	img
+	{
+	    height: 250px;
+	    width: 100%;
+	    object-fit: cover;
+	    @include media-breakpoint-up(md)
+	    {
+		height: 400px;
+	    }
+	    @include media-breakpoint-up(lg)
+	    {
+		height: 545px;
+	    }
+	    @include media-breakpoint-up(xl)
+	    {
+		height: 710px;
+	    }
+	    @include media-breakpoint-up(xxl)
+	    {
+		height: 740px;
+	    }
+	}
+    }
+}
+
+.title
+{
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    @include media-breakpoint-up(md)
+    {
+	font-size: 1.9rem;
+    }
+}
+
+
+.banner
+{
+    .banner__photo
+    {
+	background-size: cover;
+	height: 250px;
+	@include media-breakpoint-up(md)
+	{
+	    height: 380px;
+	}
+	@include media-breakpoint-up(lg)
+	{
+	    height: 500px;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    height: 700px;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    height: 800px;
+	}
+    }
+
+    .banner__specs
+    {
+	height: 100%;
+	border: 2px solid #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: #fff;
+	padding: 1.5rem;
+
+	.banner__icon
+	{
+	    height: 50px;
+	    width: auto;
+	    object-fit: contain;
+	    @include media-breakpoint-up(lg)
+	    {
+		 height: 70px;
+	    }
+	    @include media-breakpoint-up(xl)
+	    {
+		height: 95px;
+	    }
+	}
+
+
+	.banner__title
+	{
+	    font-size: 2rem;
+	    text-transform: uppercase;
+	    font-weight: 600;
+	    @include media-breakpoint-up(md)
+	    {
+		font-size: 1.5rem;
+	    }
+	    @include media-breakpoint-up(lg)
+	    {
+		font-size: 2.5rem;
+	    }
+	    @include media-breakpoint-up(xl)
+	    {
+		font-size: 3.3rem;
+	    }
+	    @include media-breakpoint-up(xxl)
+	    {
+		max-width: 570px;
+	    }
+	}
+    }
+
+}
+
+.our-products-tabs
+{
+    .nav-tabs
+    {
+	border-bottom: 0;
+
+	.nav-link
+	{
+	    position: relative;
+	    border-color: transparent;
+	    text-transform: uppercase;
+	    font-weight: 300;
+	    font-size: 1rem;
+	    padding: 0.5rem 1rem;
+	    @include media-breakpoint-up(md)
+	    {
+		padding: 0.5rem 1.5rem;
+		font-size: 1.1rem;
+	    }
+
+	    &:after
+		{
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 0;
+		width: 0;
+		height: 2px;
+		background: $primary;
+		@extend .anim;
+	    }
+
+	    &:hover
+		{
+		border-color: transparent;
+		&:after
+		    {
+		    width: 30px;
+		}
+	    }
+
+
+	    &.active
+	    {
+		padding-bottom: .5rem;
+		&:after
+		    {
+		    width: 30px;
+		}
+
+	    }
+
+	}
+    }
+}
+
+.about-carousel-wrapper
+{
+    background: lighten($primary, 21%);
+}
+
+.about-img
+{
+    background-size: cover;
+    background-position: top center;
+    height: 300px;
+    width: 100%;
+    position: relative;
+    @include media-breakpoint-up(lg)
+    {
+	height: 400px;
+    }
+    @include media-breakpoint-up(xl)
+    {
+	height: 500px;
+    }
+
+    @include media-breakpoint-up(xxl)
+    {
+	height: 550px;
+    }
+
+    &:after
+	{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: -2rem;
+	height: 120%;
+	width: 100%;
+	background: #fff;
+	border: 15px solid $primary;
+	z-index: -1;
+	@include media-breakpoint-up(md)
+	{
+	    content: "";
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    left: -3rem;
+	    border: 20px solid $primary;
+	}
+    }
+}
+
+.about-description
+{
+    display: inline-block;
+    text-align: left;
+    font-size: .9rem;
+    @include media-breakpoint-up(xl)
+    {
+	max-width: 85%;
+    }
+
+    .about-title
+    {
+	font-size: 1.5rem;
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+	color: $primary;
+	@include media-breakpoint-up(md)
+	{
+	    font-size: 2rem;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    font-size: 2.5rem;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    font-size: 3rem;
+	}
+    }
+}
+
+.contact-form
+{
+    @include media-breakpoint-up(lg)
+    {
+	margin-top: -4rem;
+    }
+    @include media-breakpoint-up(xxl)
+    {
+	margin-top: -6rem;
+    }
+
+    .form-title
+    {
+	font-size: 2rem;
+	font-weight: 500;
+	@include media-breakpoint-up(xl)
+	{
+	    font-size: 2.5rem;
+	}
+    }
+}
+
+.contact-details
+{
+    display: inline-block;
+    text-align: left;
+    min-width: 350px;
+    @include media-breakpoint-up(xxl)
+    {
+	font-size: 1.2rem;
+	min-width: 440px;
+    }
+
+    .title
+    {
+	text-transform: none !important;
+	@include media-breakpoint-up(xxl)
+	{
+	    font-size: 2.4rem !important;
+	}
+    }
+
+    .icon
+    {
+	font-size: 1.7rem;
+	font-weight: 700;
+	color: $secondary;
+	@include media-breakpoint-up(xxl)
+	{
+	    font-size: 2rem;
+	}
+    }
+}
+
+#map
+{
+    height: 300px;
+    @include media-breakpoint-up(lg)
+    {
+	height: 500px;
+    }
+}

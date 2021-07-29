@@ -1,0 +1,171 @@
+.new-products-carousel
+{
+    .owl-nav 
+    {
+	div
+	{
+	    background: transparent !important;
+	    display: flex !important; 
+	    justify-content: center;
+	    align-items: center;
+	    width: 37px;
+	    height: 37px;
+	    border: 2px solid $muted;
+	    border-radius: 50% !important;
+	    color: $muted !important;
+	    font-size: 1rem !important;
+	    position: absolute;
+	    top: 30%;
+	}
+    }
+
+    .owl-prev
+    {
+	left: -8rem;
+	span
+	{
+	    font-weight: 700;
+	}
+    }
+
+    .owl-next
+    {
+	right: -8rem;
+	span
+	{
+	    font-weight: 700;
+	}
+    }
+
+    .product
+    {
+	img
+	{
+	    @include media-breakpoint-up(xxl)
+	    {
+		height: 400px !important;
+	    }
+	}
+    }
+}
+
+
+.about-carousel
+{
+    position: relative;
+
+    img
+    {
+	height: 200px;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
+	@extend .rounded;
+    }
+    .owl-stage-outer
+    {
+	@include media-breakpoint-up(md)
+	{
+	    padding-top: 3rem;
+	}
+    }
+    .owl-item.iterator-2, .owl-item.iterator2
+    {
+	img
+	{
+	    @extend .anim;
+	}
+
+	@include media-breakpoint-up(md)
+	{
+	    img
+	    {
+		height: 200px;
+		opacity: .5;
+	    }
+	}
+    }
+
+    .owl-item.iterator-1, .owl-item.iterator1
+    {
+	img
+	{
+	    @extend .anim;
+	}
+
+	@include media-breakpoint-up(md)
+	{
+	    img
+	    {
+		height: 250px;
+		opacity: 1;
+		margin-top: -1.5rem;
+	    }
+	}
+    }
+
+    .owl-item
+    {
+	&.center
+	{
+	    img
+	    {
+
+		@include media-breakpoint-up(md)
+		{
+		    margin-top: -3rem;
+		    height: 300px;
+		    opacity: 1;
+		}
+	    }
+	}
+    }
+
+    .owl-nav 
+    {
+	div
+	{
+	    background: $primary !important;
+	    display: flex !important;
+	    align-items: center;
+	    justify-content: center;
+	    height: 30px;
+	    width: 30px;
+	    font-size: 1rem !important;
+	    border-radius: 50% !important;
+	    position: absolute;
+	    top: 42%;
+	    @include media-breakpoint-up(lg)
+	    {
+		height: 40px;
+		width: 40px;
+	    }
+	    
+	    span
+	    {
+		font-weight: 700;
+	    }
+	}
+    }
+
+    .owl-prev
+    {
+	left: -4rem;
+	@include media-breakpoint-up(xl)
+	{
+	    left: -6rem;
+	}
+    }
+
+    .owl-next
+    {
+	right: -4rem;
+
+	@include media-breakpoint-up(xl)
+	{
+	    right: -6rem;
+	}
+
+    }
+
+}

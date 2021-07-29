@@ -1,0 +1,102 @@
+
+#swipebox-overlay {
+    background:#fff;
+}
+
+#mainPhotos
+{
+    .owl__item
+    {
+	padding: .5rem;
+	margin: 1px;
+	background: #fff;
+
+	/*@extend .border;*/
+
+	img
+	{
+
+	    height: 250px;
+	    width: 100%;
+	    object-fit: contain;
+	    @include media-breakpoint-up(md)
+	    {
+		height: 350px;
+	    }
+	    @include media-breakpoint-up(xl)
+	    {
+		height: 400px;
+	    }
+	    @include media-breakpoint-up(xxl)
+	    {
+		height: 490px;
+	    }
+	}
+    }
+}
+
+#product-photos
+{
+
+    .owl-nav
+    {
+	div
+	{
+	    color: $primary;
+	    display: flex;
+	    position: absolute;
+	    top: 20%;
+	    font-size: 1.5rem;
+	    background: $light !important;
+	}
+    }
+
+    .owl-prev
+    {
+	left: 1px;
+    }
+
+    .owl-next
+    {
+	right: 1px;
+    }
+
+
+    .owl__item
+    {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem;
+	background: #fff;
+	img
+	{
+	    height: 70px;
+	    width: 100%;
+	    object-fit: contain;
+	}
+
+    }
+
+    .owl-item 
+    {
+	transition: transform 0.3s;
+	/*border: 1px solid #ccc;*/
+
+	@include media-breakpoint-up(xl)
+	{
+	    border-bottom-color: transparent;
+	}
+    }
+    .owl-item.current  
+    {
+	border-color: $secondary !important;
+	
+	@include media-breakpoint-up(xl)
+	{
+	    border-bottom-color: transparent;
+	}
+    }
+
+}
+

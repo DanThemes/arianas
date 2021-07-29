@@ -1,0 +1,169 @@
+.cart-wrapper
+{
+    .cart
+    {
+	display: none;
+	position: fixed;
+
+	z-index: 1021;
+
+	border-top: none !important;
+
+	@include media-breakpoint-down(sm)
+	{
+	    right: 0;
+	    left: 0;
+	    top: 154px;
+	}
+
+	@include media-breakpoint-up(md)
+	{
+	    top: 122px;
+	    right: 12%;
+	}
+
+	@include media-breakpoint-up(lg)
+	{
+	    right: 9%;
+	}
+
+	@include media-breakpoint-up(xl)
+	{
+	    top: 142px;
+	    right: 3%;
+	}
+	@include media-breakpoint-up(xxl)
+	{
+	    top: 158px;
+	    right: 7%;
+	}
+
+	.cart__body
+	{
+	    max-height: 40vh;
+	}
+
+
+	.cart__footer
+	{
+	    padding: 1rem;
+	}
+    }
+
+}
+
+.sticky-menu
+{
+    .cart-wrapper .cart
+    {
+	top: 74px;
+	@include media-breakpoint-up(md)
+	{
+	    top: 75px;
+	}
+	@include media-breakpoint-up(lg)
+	{
+	    top: 74px;
+	}
+	@include media-breakpoint-up(xl)
+	{
+	    top: 86px;
+	}
+    }
+}
+
+.cart__item
+{
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+
+    &:last-child
+	{
+	border-bottom: none;
+    }
+
+
+    .cart__item__img
+    {
+	height: 70px;
+	width: 70px;
+	object-fit: contain;
+
+	@include media-breakpoint-down(md)
+	{
+	    height: auto;
+	    width: 50px;
+	}
+    }
+
+    .cart__item__name
+    {
+	font-size: .8rem;
+	font-weight: 600;
+	margin-bottom: .5rem;
+	display: block;
+	display: -webkit-box;
+	width: auto;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	@include media-breakpoint-up(md)
+	{
+	    width: 250px;
+	}
+    }
+
+    .cart__item__quantity
+    {
+	font-size: .8rem;
+    }
+}
+
+.cart-item-count
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    right: 0;
+    width: 18px;
+    height: 18px;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    /*color: #fff;*/
+    background: $primary;
+    font-weight: 700;
+    @include media-breakpoint-up(xl)
+    {
+	width: 20px;
+	height: 20px;
+    }
+
+    &:empty
+	{
+	display: none;
+    }
+}
+
+
+
+.cart-trigger
+{
+    position: relative;
+    i
+    {
+	font-size: 1.5rem;
+    }
+
+}
+
+.sticky-menu
+{
+    .cart-item-count
+    {
+	width: 18px;
+	height: 18px;
+    }
+}

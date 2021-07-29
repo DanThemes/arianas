@@ -1,0 +1,53 @@
+.search
+{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0;
+    top: 80px;
+    transform: translateY(-50%);
+    width: 100%;
+    opacity: 0;
+    background: $primary;
+    box-shadow: 0 0.125rem 0.25rem 3px rgba(255, 255, 255, 0.075) !important;
+    @extend .anim;
+    @include media-breakpoint-up(md)
+    {
+	right: 215px;
+	top: 50%;
+	width: 0;
+    }
+    @include media-breakpoint-up(lg)
+    {
+	right: 215px;
+    }
+    @include media-breakpoint-up(xl)
+    {
+	right: 60px;
+    }
+
+    .form-control
+    {
+	color: #fff;
+	&::placeholder
+	{
+	    color: #fff;
+	    font-size: .9rem;
+	}
+    }
+
+    &.search-open
+    {
+	width: 100%;
+	opacity: 1;
+
+	@include media-breakpoint-up(md)
+	{
+	    width: 310px;
+	}
+	@include media-breakpoint-up(lg)
+	{
+	    width: 400px;
+	}
+    }
+}
